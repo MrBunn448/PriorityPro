@@ -1,6 +1,11 @@
 export default {
     plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
+        require('tailwindcss'),
+        require('autoprefixer'),
     },
+};
+module.exports = {
+    plugins: [
+
+    ],
 };

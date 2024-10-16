@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content and button are spaced apart */
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    max-width: 28rem;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.description {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #10b981;
+    margin-right: 0.5rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.feature span {
+    color: #374151;
+}
+
+.button-container {
+    margin-top: 2rem;
+}
+
+.login-button {
+    display: block;
+    width: 80%;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* home page background animation */
+        /* Reset default margin/padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page wave background */
+        section {
+            position: relative;
+            display: flex; /* Enable flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 100%;
+            height: 100vh;
+            background: #3586ff;
+            overflow: hidden;
+        }
+
+        /* Waves */
+        section .air {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+            background-size: 1000px 100px;
+        }
+
+        section .air.air1 {
+            animation: wave 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            bottom: 0;
+        }
+
+        section .air.air2 {
+            animation: wave2 15s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            bottom: 10px;
+        }
+
+        section .air.air3 {
+            animation: wave 30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            bottom: 15px;
+        }
+
+        section .air.air4 {
+            animation: wave2 5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            bottom: 20px;
+        }
+
+        @keyframes wave {
+            0% {
+                background-position-x: 0px;
+            }
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        @keyframes wave2 {
+            0% {
+                background-position-x: 0px;
+            }
+            100% {
+                background-position-x: -1000px;
+            }
+        }
+
+        /* Centered content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 28rem;
+            width: 100%;
+            height: 70vh; /* Adjusted height to keep it responsive */
+            position: relative;
+            z-index: 2000; /* Make sure the container is above the waves */
+        }
+
+        .description {
+            text-align: center; /* Center text content */
+            margin: 1rem 0; /* Add some margin for spacing */
+        }
+
+        .features {
+            width: 100%; /* Ensure features take full width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0; /* Add some margin for spacing */
+        }
+
+        .icon {
+            width: 24px; /* Set icon size */
+            height: 24px; /* Set icon size */
+            margin-right: 0.5rem; /* Space between icon and text */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .login-button {
+            padding: 0.75rem 2rem;
+            background-color: #1d4ed8;
+            color: white;
+            text-decoration: none; /* Remove underline from link */
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #2563eb;
+        }
